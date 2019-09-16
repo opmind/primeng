@@ -1,0 +1,48 @@
+.ui-widget {
+  text-decoration: none;
+}
+
+.ui-corner-all {
+  border-radius: $global-radius;
+}
+
+.ui-corner-top {
+  border-top-left-radius: $global-radius;
+  border-top-right-radius: $global-radius;
+}
+
+.ui-corner-bottom {
+  border-bottom-left-radius: $global-radius;
+  border-bottom-right-radius: $global-radius;
+}
+
+.ui-corner-left {
+  border-top-left-radius: $global-radius;
+  border-bottom-left-radius: $global-radius;
+}
+
+.ui-corner-right {
+  border-top-right-radius: $global-radius;
+  border-bottom-right-radius: $global-radius;
+}
+
+.ui-helper-reset {
+  line-height: normal;
+}
+
+.ui-state-disabled {
+  cursor: not-allowed !important;
+}
+
+.ui-state-disabled a {
+  cursor: not-allowed !important;
+}
+
+.ui-state-disabled, .ui-widget:disabled {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.pi {
+  font-size: 1.25em;
+}

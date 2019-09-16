@@ -1,0 +1,373 @@
+.ui-button {
+  margin: 0;
+  color: $color-base-white;
+  background-color: $color-brand-primary;
+  border: 1px solid $color-brand-primary;
+  font-size: 14px;
+  transition: background-color 0.2s, box-shadow 0.2s;
+
+  &:enabled {
+    &:hover {
+      background-color: $color-blue-dark-600;
+      color: $color-base-white;
+      border-color: $color-blue-dark-600;
+    }
+
+    &:focus {
+      outline: 0 none;
+      outline-offset: 0;
+      box-shadow: 0 0 0 0.2em $color-blue-dark-200;
+    }
+
+    &:active {
+      background-color: $color-blue-dark-800;
+      color: $color-base-white;
+      border-color: $color-blue-dark-800;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &.ui-button-icon-only .ui-button-text,
+  &.ui-button-text-empty .ui-button-text {
+    padding: $unit-tiny;
+  }
+
+  &.ui-button-text-icon-right .ui-button-text {
+    padding: $unit-tiny $unit-large $unit-tiny $unit;
+  }
+
+  /*button icon element(s) */
+  &.ui-button-icon-only .ui-button-icon-left,
+  &.ui-button-text-icon-left .ui-button-icon-left,
+  &.ui-button-text-icon-right .ui-button-icon-right {
+    position: absolute;
+    top: 50%;
+    margin-top: -.5em;
+    height: 1em;
+  }
+
+  &.ui-button-icon-only .ui-button-icon-left {
+    top: 50%;
+    left: 50%;
+    margin-top: -.5em;
+    margin-left: -.5em;
+    width: 1em;
+    height: 1em;
+  }
+
+  &.ui-button-icon-left {
+    left: .5em;
+  }
+
+  &.ui-button-icon-right {
+    right: .5em;
+  }
+
+  &.ui-button-text-only .ui-button-text {
+    padding: $unit-tiny $unit;
+  }
+
+  &.ui-button-text-icon-left .ui-button-text {
+    padding: $unit-tiny $unit $unit-tiny $unit-huge;
+  }
+
+  &.ui-button-text-icon-right .ui-button-text {
+    padding: $unit-tiny $unit-huge $unit-tiny $unit;
+  }
+
+  &.ui-button-icon-only {
+    width: $unit-huge;
+  }
+
+  &.ui-button-raised {
+    box-shadow: $component-box-shadow;
+  }
+
+  &.ui-button-rounded {
+    border-radius: $global-radius-rounded;
+  }
+
+  &.ui-state-default.ui-button-secondary {
+    color: $text-color;
+    background-color: $color-brand-secondary;
+    border: 1px solid $color-brand-secondary;
+
+    &:enabled {
+      &:hover {
+        background-color: $color-gray-10;
+        color: $text-color;
+        border-color: $color-gray-10;
+      }
+
+      &:focus {
+        -webkit-box-shadow: 0 0 0 0.2em $color-blue-light;
+        -moz-box-shadow: 0 0 0 0.2em $color-blue-light;
+        box-shadow: 0 0 0 0.2em $color-blue-light;
+      }
+
+      &:active {
+        background-color: $color-gray-20;
+        color: $text-color-on-dark;
+        border-color: $color-blue-light-600;
+      }
+    }
+  }
+
+  &.ui-state-default.ui-button-info {
+    color: $color-base-white;
+    background-color: $color-status-info;
+    border: 1px solid $color-status-info;
+
+    &:enabled {
+      &:hover {
+        background-color: $color-blue-info-600;
+        color: $color-base-white;
+        border-color: $color-blue-info-600;
+      }
+
+      &:focus {
+        -webkit-box-shadow: 0 0 0 0.2em $color-blue-info-200;
+        -moz-box-shadow: 0 0 0 0.2em $color-blue-info-200;
+        box-shadow: 0 0 0 0.2em $color-blue-info-200;
+      }
+
+      &:active {
+        background-color: $color-blue-info-800;
+        color: $color-base-white;
+        border-color: $color-blue-info-800;
+      }
+    }
+  }
+
+  &.ui-state-default.ui-button-success {
+    color: $color-base-white;
+    background-color: $color-green;
+    border: 1px solid $color-green;
+
+    &:enabled {
+      &:hover {
+        background-color: $color-green-600;
+        color: $color-base-white;
+        border-color: $color-green-600;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 0.2em $color-green-100;
+      }
+
+      &:active {
+        background-color: $color-green-800;
+        color: $color-base-white;
+        border-color: $color-green-800;
+      }
+    }
+  }
+
+  &.ui-state-default.ui-button-warning {
+    color: #333333;
+    background-color: #ffba01;
+    border: 1px solid #ffba01;
+
+    &:enabled {
+      &:hover {
+        background-color: #ED990B;
+        color: #333333;
+        border-color: #ED990B;
+      }
+
+      &:focus {
+        -webkit-box-shadow: 0 0 0 0.2em #ffeab4;
+        -moz-box-shadow: 0 0 0 0.2em #ffeab4;
+        box-shadow: 0 0 0 0.2em #ffeab4;
+      }
+
+      &:active {
+        background-color: #D38B10;
+        color: #333333;
+        border-color: #D38B10;
+      }
+    }
+  }
+
+  &.ui-state-default.ui-button-danger {
+    color: $color-base-white;
+    background-color: #e91224;
+    border: 1px solid #e91224;
+
+    &:enabled {
+      &:hover {
+        background-color: #c01120;
+        color: $color-base-white;
+        border-color: #c01120;
+      }
+
+      &:focus {
+        -webkit-box-shadow: 0 0 0 0.2em #f9b4ba;
+        -moz-box-shadow: 0 0 0 0.2em #f9b4ba;
+        box-shadow: 0 0 0 0.2em #f9b4ba;
+      }
+
+      &:active {
+        background-color: #a90000;
+        color: $color-base-white;
+        border-color: #a90000;
+      }
+    }
+  }
+
+}
+
+.ui-fluid .ui-button-icon-only {
+  width: 2.357em;
+}
+
+.ui-fluid .ui-button-text-icon-left .ui-button-text,
+.ui-fluid .ui-button-text-icon-right .ui-button-text {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.ui-buttonset {
+  &.ui-button-secondary {
+    > .ui-button.ui-state-default {
+      color: #333333;
+      background-color: #f4f4f4;
+      border: 1px solid #f4f4f4;
+
+      &:enabled {
+        &:hover {
+          background-color: #c8c8c8;
+          color: #333333;
+          border-color: #c8c8c8;
+        }
+
+        &:focus {
+          -webkit-box-shadow: 0 0 0 0.2em #8dcdff;
+          -moz-box-shadow: 0 0 0 0.2em #8dcdff;
+          box-shadow: 0 0 0 0.2em #8dcdff;
+        }
+
+        &:active {
+          background-color: #a0a0a0;
+          color: #333333;
+          border-color: #a0a0a0;
+        }
+      }
+    }
+  }
+
+  &.ui-button-info {
+    > .ui-button.ui-state-default {
+      color: $color-base-white;
+      background-color: #007ad9;
+      border: 1px solid #007ad9;
+
+      &:enabled {
+        &:hover {
+          background-color: #116fbf;
+          color: $color-base-white;
+          border-color: #116fbf;
+        }
+
+        &:focus {
+          -webkit-box-shadow: 0 0 0 0.2em #8dcdff;
+          -moz-box-shadow: 0 0 0 0.2em #8dcdff;
+          box-shadow: 0 0 0 0.2em #8dcdff;
+        }
+
+        &:active {
+          background-color: #005b9f;
+          color: $color-base-white;
+          border-color: #005b9f;
+        }
+      }
+    }
+  }
+
+  &.ui-button-success {
+    > .ui-button.ui-state-default {
+      color: $color-base-white;
+      background-color: #34A835;
+      border: 1px solid #34A835;
+
+      &:enabled {
+        &:hover {
+          background-color: #107D11;
+          color: $color-base-white;
+          border-color: #107D11;
+        }
+
+        &:focus {
+          -webkit-box-shadow: 0 0 0 0.2em #aae5aa;
+          -moz-box-shadow: 0 0 0 0.2em #aae5aa;
+          box-shadow: 0 0 0 0.2em #aae5aa;
+        }
+
+        &:active {
+          background-color: #0C6B0D;
+          color: $color-base-white;
+          border-color: #0C6B0D;
+        }
+      }
+    }
+  }
+
+  &.ui-button-warning {
+    > .ui-button.ui-state-default {
+      color: #333333;
+      background-color: #ffba01;
+      border: 1px solid #ffba01;
+
+      &:enabled {
+        &:hover {
+          background-color: #ED990B;
+          color: #333333;
+          border-color: #ED990B;
+        }
+
+        &:focus {
+          -webkit-box-shadow: 0 0 0 0.2em #ffeab4;
+          -moz-box-shadow: 0 0 0 0.2em #ffeab4;
+          box-shadow: 0 0 0 0.2em #ffeab4;
+        }
+
+        &:active {
+          background-color: #D38B10;
+          color: #333333;
+          border-color: #D38B10;
+        }
+      }
+    }
+  }
+
+  &.ui-button-danger {
+    > .ui-button.ui-state-default {
+      color: $color-base-white;
+      background-color: #e91224;
+      border: 1px solid #e91224;
+
+      &:enabled {
+        &:hover {
+          background-color: #c01120;
+          color: $color-base-white;
+          border-color: #c01120;
+        }
+
+        &:focus {
+          -webkit-box-shadow: 0 0 0 0.2em #f9b4ba;
+          -moz-box-shadow: 0 0 0 0.2em #f9b4ba;
+          box-shadow: 0 0 0 0.2em #f9b4ba;
+        }
+
+        &:active {
+          background-color: #a90000;
+          color: $color-base-white;
+          border-color: #a90000;
+        }
+      }
+    }
+  }
+}
