@@ -1,0 +1,88 @@
+.ui-dataview-column {
+  padding: $unit-tiny;
+}
+
+.ui-dataview-content-empty {
+  padding: $unit-tiny $unit-small;
+}
+
+.ui-dataview {
+  .ui-dataview-header, .ui-dataview-footer {
+    padding: $unit-small;
+  }
+
+  .ui-dataview-header {
+    border-bottom: 0 none;
+  }
+
+  .ui-dataview-footer {
+    border-top: 0 none;
+  }
+
+  .ui-paginator-top {
+    border-bottom: 0 none;
+  }
+
+  .ui-paginator-bottom {
+    border-top: 0 none;
+  }
+
+  &.ui-dataview-list > .ui-dataview-content > div.ui-g > div {
+    width: 100%;
+  }
+
+  .ui-dataview-emptymessage {
+    padding: $unit-small;
+  }
+}
+
+/* Loader */
+
+.ui-dataview-loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.ui-dataview-loading-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  margin-top: -1em;
+  margin-left: -1em;
+}
+
+.ui-dataview-loading-icon {
+  font-size: 2em;
+}
+
+.ui-dataview {
+  .ui-dataview-header {
+    background-color: $color-base-white;
+    color: $text-color-on-light;
+    border: 1px solid $color-gray-5;
+    padding: $unit-tiny $unit-small;
+    font-weight: 700;
+    border-bottom: 0 none;
+  }
+
+  .ui-dataview-content {
+    padding: $unit-tiny $unit-small;
+    border: 1px solid $color-gray-5;
+    background-color: $color-base-white;
+    color: $text-color-on-light;
+    padding: $unit-tiny $unit-small;
+  }
+
+  .ui-dataview-footer {
+    background-color: $color-base-white;
+    color: $text-color-on-light;
+    border: 1px solid $color-gray-5;
+    padding: $unit-tiny $unit-small;
+    border-top: 0 none;
+  }
+}

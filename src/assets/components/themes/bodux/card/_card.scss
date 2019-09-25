@@ -1,0 +1,30 @@
+.ui-card-header img {
+  width: 100%;
+}
+
+.ui-card-body {
+  padding: $unit;
+}
+
+.ui-card-title {
+  font-size: $inuit-font-size-large;
+  font-weight: bold;
+  margin-bottom: $unit-small;
+}
+
+.ui-card-subtitle {
+  opacity: .7;
+  margin-bottom: $unit-small;
+  margin-top: -$unit-tiny;
+  font-weight: bold;
+}
+
+.ui-card-footer {
+  padding-top: $unit;
+}
+
+.ui-card {
+  background-color: $color-base-white;
+  color: $text-color-on-light;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+}

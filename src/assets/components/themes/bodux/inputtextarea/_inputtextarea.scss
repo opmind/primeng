@@ -1,0 +1,17 @@
+.ui-float-label > textarea ~ label {
+  left: $unit-tiny;
+  top: $unit;
+}
+
+/* breaks firefox so defined separately */
+.ui-float-label textarea:-webkit-autofill ~ label {
+  top: -$unit-small;
+  font-size: $inuit-font-size-small;
+}
+
+.ui-float-label textarea:focus ~ label,
+.ui-float-label textarea.ui-state-filled ~ label {
+  top: -$unit-small;
+  left: $unit-xtiny;
+  font-size: $inuit-font-size-small;
+}

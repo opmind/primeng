@@ -1,0 +1,75 @@
+.ui-fieldset {
+  padding: $unit-tiny $unit-small;
+
+  .ui-fieldset-legend {
+    padding: $unit-tiny $unit-small;
+  }
+}
+
+.ui-fieldset-toggleable .ui-fieldset-legend {
+  padding: 0;
+
+  a {
+    padding: $unit-tiny $unit-small;
+    cursor: pointer;
+    white-space: nowrap;
+    display: block;
+  }
+}
+
+.ui-fieldset {
+  .ui-fieldset-toggler {
+    margin-right: $unit-xtiny;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .ui-fieldset-legend-text {
+    vertical-align: middle;
+  }
+
+  .ui-fieldset-content-wrapper-overflown {
+    overflow: hidden;
+  }
+}
+
+.ui-fieldset {
+  border: 1px solid $color-gray-5;
+  background-color: $color-base-white;
+  color: $text-color-on-light;
+
+  .ui-fieldset-legend a {
+    padding: 0.571em 1em;
+    border: 1px solid $color-gray-5;
+    color: $text-color-on-light;
+    background-color: #f4f4f4;
+    border-radius: $global-radius;
+    transition: background-color 0.2s;
+
+    .ui-fieldset-toggler {
+      float: none;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: $unit-small;
+      color: $color-gray-10;
+    }
+
+    .ui-fieldset-legend-text {
+      padding: 0;
+    }
+  }
+
+  &.ui-fieldset-toggleable .ui-fieldset-legend a:hover {
+    background-color: $color-gray-5;
+    border: 1px solid $color-gray-5;
+    color: $text-color-on-light;
+
+    .ui-fieldset-toggler {
+      color: $text-color-on-light;
+    }
+  }
+
+  .ui-fieldset-content {
+    padding: 0;
+  }
+}

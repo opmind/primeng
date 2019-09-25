@@ -1,0 +1,118 @@
+.ui-dialog {
+  .ui-dialog-titlebar {
+    padding: $unit-small $unit;
+    position: relative;
+    border: 0;
+  }
+
+  .ui-dialog-content {
+    padding: $unit-small $unit;
+  }
+}
+
+.ui-dialog .ui-resizable-se {
+  width: 14px;
+  height: 14px;
+  right: 3px;
+  bottom: 3px;
+}
+
+.ui-draggable .ui-dialog-titlebar {
+  cursor: move;
+}
+
+.ui-dialog .ui-dialog-titlebar-icon {
+  padding: $unit-tiny;
+}
+
+/* ConfirmDialog */
+
+.ui-confirmdialog {
+  width: 30em;
+  top: 50%;
+  left: 50%;
+
+  &.ui-dialog .ui-dialog-content {
+    padding: $unit $unit-huge;
+  }
+
+  .ui-dialog-content .ui-confirmdialog-icon {
+    font-size: $inuit-font-size-h3;
+    margin-right: $unit-small;
+    top: $unit-xtiny;
+  }
+}
+
+.ui-dialog-footer .ui-button {
+  margin-right: $unit;
+}
+
+.ui-dialog {
+  padding: 0;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.16);
+
+  .ui-dialog-titlebar {
+    background-color: $color-base-white;
+    color: $text-color-on-light;
+    padding: $unit;
+    font-weight: 700;
+    border-bottom: 0 none;
+
+    .ui-dialog-title {
+      margin: 0;
+      float: none;
+    }
+
+    .ui-dialog-titlebar-icon {
+      color: $text-color-on-light;
+      border: 0 none;
+      padding: 0;
+      margin-left: $unit-small;
+      transition: color 0.2s;
+
+      &:hover {
+        color: $color-gray-10;
+      }
+    }
+  }
+
+  .ui-dialog-content {
+    background-color: $color-base-white;
+    color: $text-color-on-light;
+    border-top: 1px solid $color-gray-5;
+    padding: $unit-tiny $unit-small;
+  }
+
+  .ui-dialog-footer {
+    border-top: 1px solid $color-gray-5;
+    background-color:$color-base-white;
+    color: $text-color-on-light;
+    padding: $unit-tiny $unit-small;
+    margin: 0;
+    text-align: right;
+    position: relative;
+    top: -1px;
+
+    button {
+      margin: 0 $unit-small 0 0;
+      width: auto;
+    }
+  }
+
+  &.ui-confirm-dialog .ui-dialog-content {
+    padding: $unit-large;
+
+    > span {
+      float: none;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: $inuit-font-size-base;
+      margin: 0;
+
+      &.ui-icon {
+        margin-right: $unit-small;
+        font-size: $inuit-font-size-large;
+      }
+    }
+  }
+}

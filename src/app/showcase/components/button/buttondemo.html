@@ -28,6 +28,14 @@
     <button pButton type="button" label="Warning" class="ui-button-warning"></button>
     <button pButton type="button" label="Danger" class="ui-button-danger"></button>
 
+    <h3>Severity Buttons Disabled</h3>
+    <button pButton type="button" [disabled]="true" label="Primary disabled"></button>
+    <button pButton type="button" [disabled]="true" label="Secondary disabled" class="ui-button-secondary"></button>
+    <button pButton type="button" [disabled]="true" label="Success disabled" class="ui-button-success"></button>
+    <button pButton type="button" [disabled]="true" label="Info disabled" class="ui-button-info"></button>
+    <button pButton type="button" [disabled]="true" label="Warning disabled" class="ui-button-warning"></button>
+    <button pButton type="button" [disabled]="true" label="Danger disabled" class="ui-button-danger"></button>
+
     <h3>Raised Buttons</h3>
     <button pButton type="button" label="Primary" class="ui-button-raised"></button>
     <button pButton type="button" label="Secondary" class="ui-button-raised ui-button-secondary"></button>
@@ -43,6 +51,16 @@
     <button pButton type="button" label="Info" class="ui-button-rounded ui-button-info"></button>
     <button pButton type="button" label="Warning" class="ui-button-rounded ui-button-warning"></button>
     <button pButton type="button" label="Danger" class="ui-button-rounded ui-button-danger"></button>
+
+    <h3>Button Sets</h3>
+    <div class="ui-buttonset ui-button-secondary">
+      <button pButton type="button" label="Primary" cornerStyleClass="ui-corner-left"></button>
+      <button pButton type="button" label="Secondary" cornerStyleClass="ui-corner-none" class="ui-button-secondary"></button>
+      <button pButton type="button" label="Success" cornerStyleClass="ui-corner-none" class="ui-button-success"></button>
+      <button pButton type="button" label="Info" cornerStyleClass="ui-corner-none" class="ui-button-info"></button>
+      <button pButton type="button" label="Warning" cornerStyleClass="ui-corner-none" class="ui-button-warning"></button>
+      <button pButton type="button" label="Danger" cornerStyleClass="ui-corner-right" class="ui-button-danger"></button>
+    </div>
 </div>
 
 <div class="content-section documentation">

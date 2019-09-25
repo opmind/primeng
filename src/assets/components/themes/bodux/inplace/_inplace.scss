@@ -1,0 +1,19 @@
+.ui-inplace {
+  min-height: $unit-xhuge;
+
+  .ui-inplace-display {
+    padding: $unit-tiny;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+
+    &:not(.ui-state-disabled):hover {
+      background-color: $color-gray-2;
+      color: $text-color-on-light;
+    }
+  }
+}
+
+.ui-fluid .ui-inplace.ui-inplace-closable .ui-inplace-content > :first-child {
+  display: inline-block;
+  width: calc(100% - #{$unit-xhuge});
+}

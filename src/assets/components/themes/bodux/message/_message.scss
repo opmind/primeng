@@ -1,0 +1,109 @@
+
+.ui-messages {
+  padding: $unit;
+  margin: $unit 0;
+
+  &.ui-messages-info {
+    background-color: $color-blue-info-200;
+    border: 0 none;
+    color: $text-color-on-light;
+
+    .ui-messages-icon, .ui-messages-close {
+      color: $text-color-on-light;
+    }
+  }
+
+  &.ui-messages-success {
+    background-color: $color-green-100;
+    border: 0 none;
+    color: $text-color-on-light;
+
+    .ui-messages-icon, .ui-messages-close {
+      color: $text-color-on-light;
+    }
+  }
+
+  &.ui-messages-warn {
+    background-color: $color-yellow-100;
+    border: 0 none;
+    color: $text-color-on-light;
+
+    .ui-messages-icon, .ui-messages-close {
+      color: $text-color-on-light;
+    }
+  }
+
+  &.ui-messages-error {
+    background-color: $color-red-100;
+    border: 0 none;
+    color: $text-color-on-light;
+
+    .ui-messages-icon, .ui-messages-close {
+      color: $text-color-on-light;
+    }
+  }
+
+  .ui-messages-close {
+    top: $unit-tiny;
+    right: $unit-small;
+    font-size: 1.5em;
+  }
+
+  .ui-messages-icon {
+    font-size: 2em;
+  }
+}
+
+.ui-message {
+  padding: $unit-tiny;
+  margin: 0;
+
+  &.ui-message-info {
+    background-color: $color-blue-info-200;
+    border: 0 none;
+    color: $text-color-on-light;
+
+    .ui-message-icon {
+      color: $text-color-on-light;
+    }
+  }
+
+  &.ui-message-success {
+    background-color: $color-green-100;
+    border: 0 none;
+    color: $text-color-on-light;
+
+    .ui-message-icon {
+      color: $text-color-on-light;
+    }
+  }
+
+  &.ui-message-warn {
+    background-color: $color-yellow-100;
+    border: 0 none;
+    color: $text-color-on-light;
+
+    .ui-message-icon {
+      color: $text-color-on-light;
+    }
+  }
+
+  &.ui-message-error {
+    background-color: $color-red-100;
+    border: 0 none;
+    color: $text-color-on-light;
+
+    .ui-message-icon {
+      color: $text-color-on-light;
+    }
+  }
+
+  .ui-message-icon {
+    font-size: 1.2em;
+  }
+
+  .ui-message-text {
+    font-size: $inuit-font-size-base;
+    line-height: 1;
+  }
+}

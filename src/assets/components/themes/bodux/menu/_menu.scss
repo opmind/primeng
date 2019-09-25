@@ -1,0 +1,81 @@
+.ui-menu {
+  width: 12.5em;
+  padding: .25em;
+
+  .ui-submenu-header {
+    padding: $unit-tiny $unit-small;
+    margin: $unit-xtiny 0;
+  }
+
+  .ui-menuitem {
+    margin: $unit-xtiny 0;
+  }
+
+  .ui-menuitem-link {
+    padding: $unit-tiny;
+  }
+
+  .ui-menuitem-icon {
+    margin-right: $unit-tiny;
+  }
+}
+
+.ui-menu .ui-menuitem-link,
+.ui-menubar .ui-menuitem-link,
+.ui-tieredmenu .ui-menuitem-link,
+.ui-contextmenu .ui-menuitem-link,
+.ui-megamenu .ui-menuitem-link,
+.ui-slidemenu .ui-menuitem-link {
+  padding: $unit-small $unit-small;
+  color: $text-color-on-light;
+
+  .ui-menuitem-text {
+    color: $text-color-on-light;
+  }
+
+  .ui-menuitem-icon {
+    color: $text-color-on-light;
+    margin-right: $unit-small;
+  }
+
+  &:hover {
+    background-color: $color-gray-5;
+
+    .ui-menuitem-text {
+      color: $text-color-on-light;
+    }
+
+    .ui-menuitem-icon {
+      color: $text-color-on-light;
+    }
+  }
+}
+
+.ui-menu {
+  padding: 0;
+  background-color: $color-base-white;
+  border: 1px solid $color-gray-10;
+
+  .ui-menuitem {
+    margin: 0;
+  }
+
+  &.ui-shadow {
+    border: 1px solid $color-gray-10;
+    box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.16);
+  }
+
+  .ui-submenu-header {
+    margin: 0;
+    padding: $unit-small;
+    color: $color-base-white;
+    background-color: $text-color-on-light;
+    border: 0 none;
+  }
+
+  .ui-menu-separator {
+    border: 1px solid $color-gray-10;
+    border-width: 1px 0 0 0;
+  }
+}
+

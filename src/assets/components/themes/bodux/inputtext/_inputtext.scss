@@ -1,0 +1,146 @@
+.ui-inputtext {
+  font-size: $inuit-global-font-size;
+  padding: $unit-tiny;
+  color: $text-color-on-light;
+  background: $color-base-white;
+  border: 1px solid $color-gray-5;
+  transition: border-color 0.2s;
+  appearance: none;
+
+  &:enabled {
+    &:hover:not(.ui-state-error) {
+      border-color: $color-gray-90;
+    }
+
+    &:focus:not(.ui-state-error) {
+      border-color: $color-brand-primary;
+      outline: 0 none;
+      box-shadow: none;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.ui-inputgroup {
+  display: flex;
+
+  .ui-inputgroup-addon {
+    min-width: 1.5em;
+    padding: $unit-tiny;
+
+    + .ui-inputgroup-addon {
+      border-left: 0 none;
+    }
+  }
+
+  .ui-inputtext {
+    padding-left: $unit-small;
+  }
+
+  .ui-button {
+    margin-right: 0;
+    border-radius: 0;
+  }
+}
+
+.ui-float-label {
+  > label {
+    left: $unit-tiny;
+    top: 50%;
+    margin-top: -.5em;
+    color: $color-gray-20;
+  }
+
+  > input:-webkit-autofill ~ label {
+    top: -$unit-small;
+    font-size: $inuit-font-size-small;
+  }
+
+  > input:focus ~ label, > input.ui-state-filled ~ label, > .ui-inputwrapper-focus ~ label, > .ui-inputwrapper-filled ~ label {
+    left: $unit-xtiny;
+    top: -$unit-small;
+    font-size: $inuit-font-size-small;
+  }
+}
+
+.ui-inputgroup .ui-inputgroup-addon {
+  border-color: $color-gray-10;
+  background-color: $color-gray-5;
+  color: $color-gray-40;
+  padding: 0.429em;
+  min-width: 2em;
+
+  &:first-child {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  &:last-child {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  &.ui-inputgroup-addon-checkbox {
+    position: relative;
+
+    .ui-chkbox {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -10px;
+      margin-top: -10px;
+    }
+  }
+
+  &.ui-inputgroup-addon-radiobutton {
+    position: relative;
+
+    .ui-radiobutton {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -10px;
+      margin-top: -10px;
+    }
+  }
+}
+
+.ui-inputgroup .ui-button:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.ui-inputgroup .ui-button:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.ui-fluid .ui-inputgroup .ui-button {
+  width: auto;
+
+  &.ui-button-icon-only {
+    width: 2.357em;
+  }
+}
+
+// todo: componentize it
+
+body .ui-inputtext.ng-dirty.ng-invalid,
+body p-dropdown.ng-dirty.ng-invalid > .ui-dropdown,
+body p-autocomplete.ng-dirty.ng-invalid > .ui-autocomplete > .ui-inputtext,
+body p-calendar.ng-dirty.ng-invalid > .ui-calendar > .ui-inputtext,
+body p-chips.ng-dirty.ng-invalid > .ui-inputtext,
+body p-inputmask.ng-dirty.ng-invalid > .ui-inputtext,
+body p-checkbox.ng-dirty.ng-invalid .ui-chkbox-box,
+body p-radiobutton.ng-dirty.ng-invalid .ui-radiobutton-box,
+body p-inputswitch.ng-dirty.ng-invalid .ui-inputswitch,
+body p-listbox.ng-dirty.ng-invalid .ui-inputtext,
+body p-multiselect.ng-dirty.ng-invalid > .ui-multiselect,
+body p-spinner.ng-dirty.ng-invalid > .ui-inputtext,
+body p-selectbutton.ng-dirty.ng-invalid .ui-button,
+body p-togglebutton.ng-dirty.ng-invalid .ui-button {
+  border: 1px solid $color-status-error;
+}

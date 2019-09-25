@@ -1,0 +1,92 @@
+.ui-tooltip {
+  position: absolute;
+  display: none;
+  padding: $unit-tiny $unit-small;
+  max-width: 12.5em;
+
+  &.ui-tooltip-right, &.ui-tooltip-left {
+    padding: 0 $unit-tiny;
+  }
+
+  &.ui-tooltip-top, &.ui-tooltip-bottom {
+    padding: .25em 0;
+  }
+
+  .ui-tooltip-text {
+    padding: $unit-xtiny $unit-small;
+    background-color: rgb(76, 76, 76);
+    color: $color-base-white;
+    white-space: pre-line;
+  }
+}
+
+.ui-tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.ui-tooltip-right .ui-tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -$unit-tiny;
+  border-width: $unit-tiny $unit-tiny $unit-tiny 0;
+  border-right-color: rgb(76, 76, 76);
+}
+
+.ui-tooltip-left .ui-tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -$unit-tiny;
+  border-width: $unit-tiny 0 $unit-tiny $unit-tiny;
+  border-left-color: rgb(76, 76, 76);
+}
+
+.ui-tooltip.ui-tooltip-top {
+  padding: $unit-tiny 0;
+}
+
+.ui-tooltip-top .ui-tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -$unit-tiny;
+  border-width: $unit-tiny $unit-tiny 0;
+  border-top-color: rgb(76, 76, 76);
+}
+
+.ui-tooltip-bottom .ui-tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -$unit-tiny;
+  border-width: 0 $unit-tiny $unit-tiny;
+  border-bottom-color: rgb(76, 76, 76);
+}
+
+.ui-tooltip {
+  .ui-tooltip-text {
+    background-color: $text-color-on-light;
+    color: $color-base-white;
+    padding: $unit-tiny;
+    -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.16);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.16);
+  }
+
+  &.ui-tooltip-right .ui-tooltip-arrow {
+    border-right-color: $text-color-on-light;
+  }
+
+  &.ui-tooltip-left .ui-tooltip-arrow {
+    border-left-color: $text-color-on-light;
+  }
+
+  &.ui-tooltip-top .ui-tooltip-arrow {
+    border-top-color: $text-color-on-light;
+  }
+
+  &.ui-tooltip-bottom .ui-tooltip-arrow {
+    border-bottom-color: $text-color-on-light;
+  }
+}

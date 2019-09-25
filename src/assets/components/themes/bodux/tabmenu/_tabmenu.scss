@@ -1,0 +1,109 @@
+/** TabMenu **/
+
+.ui-tabmenu {
+  .ui-tabmenu-nav {
+    margin: 0;
+    padding: $unit-tiny $unit-small 0 $unit-tiny;
+
+    .ui-tabmenuitem {
+      list-style: none;
+      float: left;
+      position: relative;
+      margin: 0 $unit-tiny 1px 0;
+      padding: 0;
+      white-space: nowrap;
+      display: block;
+      border-bottom: 0;
+      top: 1px;
+      outline: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      a {
+        float: left;
+        padding: $unit-tiny $unit-small;
+        text-decoration: none;
+        outline: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    a {
+      padding: $unit-tiny $unit-small;
+    }
+  }
+
+  .ui-menuitem-icon {
+    margin-right: $unit-tiny;
+    vertical-align: middle;
+  }
+
+  .ui-menuitem-text {
+    vertical-align: middle;
+  }
+
+  .ui-tabmenu-nav .ui-tabmenuitem.ui-state-disabled a {
+    cursor: default;
+  }
+}
+
+.ui-tabmenu {
+  border: 0 none;
+
+  .ui-tabmenu-nav {
+    padding: 0;
+    background: transparent;
+    border-bottom: 1px solid $color-gray-5;
+
+    .ui-tabmenuitem {
+      position: static;
+      border: 1px solid $color-gray-5;
+      background-color: $color-base-white;
+      margin-right: 2px;
+      margin-bottom: -1px;
+      transition: background-color 0.2s;
+
+      .ui-menuitem-link {
+        color: $text-color-on-light;
+        padding: $unit-tiny $unit-small;
+
+        .ui-menuitem-text {
+          color: $text-color-on-light;
+          margin-right: $unit-small;
+        }
+
+        .ui-menuitem-icon {
+          color: $color-gray-10;
+          margin-right: $unit-small;
+        }
+      }
+
+      &:not(.ui-state-active):not(.ui-state-disabled):hover {
+        background-color: $color-gray-5;
+        border: 1px solid $color-gray-5;
+
+        .ui-menuitem-link {
+          .ui-menuitem-text, .ui-menuitem-icon {
+            color: $text-color-on-light;
+          }
+        }
+      }
+
+      &.ui-state-active {
+        background-color: $color-brand-primary;
+        border: 1px solid $color-brand-primary;
+
+        .ui-menuitem-link {
+          .ui-menuitem-text, .ui-menuitem-icon {
+            color: $color-base-white;
+          }
+        }
+      }
+    }
+  }
+}

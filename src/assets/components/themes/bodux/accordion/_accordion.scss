@@ -1,0 +1,116 @@
+.ui-accordion {
+  width: 100%;
+
+  .ui-accordion-header {
+    cursor: pointer;
+    position: relative;
+    margin-top: 1px;
+    zoom: 1;
+
+    a {
+      display: block;
+      padding: $unit-small;
+      outline: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .ui-accordion-toggle-icon, .ui-accordion-header-text {
+    vertical-align: middle;
+  }
+
+  .ui-accordion-content {
+    padding: $unit;
+    border-top: 0;
+    overflow: visible;
+    zoom: 1;
+  }
+
+  .ui-accordion-header.ui-state-disabled {
+    cursor: default;
+
+    a {
+      cursor: default;
+    }
+  }
+}
+
+.ui-accordion-content-wrapper-overflown {
+  overflow: hidden;
+}
+
+.ui-rtl .ui-accordion {
+  .ui-accordion-header a {
+    padding: $unit-tiny $unit-large $unit-tiny $unit-tiny;
+  }
+
+  .ui-accordion-toggle-icon {
+    left: initial;
+    right: $unit-small;
+
+    &.pi-caret-right:before {
+      content: '\e904';
+    }
+  }
+}
+
+.ui-accordion {
+  .ui-accordion-header {
+    margin-bottom: 2px;
+
+    a {
+      padding: $unit-tiny $unit-small;
+      border: 1px solid $color-gray-5;
+      color: $text-color-on-light;
+      background-color: $color-base-white;
+      font-weight: 700;
+      transition: background-color 0.2s;
+
+      .ui-accordion-toggle-icon {
+        color: $color-gray-20;
+      }
+    }
+
+    &:not(.ui-state-active):not(.ui-state-disabled):hover a {
+      background-color: $color-gray-5;
+      border: 1px solid $color-gray-5;
+      color: $text-color-on-light;
+
+      .ui-accordion-toggle-icon {
+        color: $text-color-on-light;
+      }
+    }
+
+    &:not(.ui-state-disabled).ui-state-active {
+      a {
+        background-color: $color-blue-dark-300;
+        border: 1px solid $color-blue-dark-300;
+        color: $color-base-white;
+
+        .ui-accordion-toggle-icon {
+          color: $color-base-white;
+        }
+      }
+
+      &:hover a {
+        border: 1px solid $color-blue-dark-600;
+        background-color: $color-blue-dark-600;
+        color: $color-base-white;
+
+        .ui-accordion-toggle-icon {
+          color: $color-base-white;
+        }
+      }
+    }
+  }
+
+  .ui-accordion-content {
+    padding: $unit-tiny $unit-small;
+    border: 1px solid $color-gray-5;
+    background-color: $color-base-white;
+    color: $text-color-on-light;
+  }
+}

@@ -1,0 +1,62 @@
+.ui-inputswitch {
+  width: 3em;
+  height: 1.75em;
+}
+
+.ui-inputswitch-slider {
+  border-radius: 30px;
+}
+
+.ui-inputswitch-slider:before {
+  height: 1.250em;
+  width: 1.250em;
+  left: .25em;
+  bottom: .25em;
+}
+
+.ui-inputswitch-checked .ui-inputswitch-slider:before {
+  transform: translateX(1.250em);
+}
+
+
+.ui-inputswitch {
+  width: $unit-xhuge;
+  height: $unit-large;
+  .ui-inputswitch-slider {
+    transition: background-color 0.2s;
+    border-radius: 30px;
+    background: $color-gray-5;
+    &:before {
+      background-color: $color-base-white;
+      height: $unit;
+      width: $unit;
+      left: $unit-xtiny;
+      bottom: $unit-xtiny;
+      border-radius: 50%;
+      transition: 0.2s;
+    }
+  }
+  &.ui-inputswitch-checked .ui-inputswitch-slider:before {
+    transform: translateX($unit);
+  }
+  &.ui-inputswitch-focus .ui-inputswitch-slider {
+    background: $color-gray-10;
+  }
+  &:not(.ui-state-disabled):hover .ui-inputswitch-slider {
+    background-color: $color-gray-10;
+  }
+  &.ui-inputswitch-checked .ui-inputswitch-slider {
+    background-color: $color-brand-primary;
+  }
+  &.ui-inputswitch-checked:not(.ui-state-disabled):hover .ui-inputswitch-slider {
+    background-color: $color-blue-dark-600;
+  }
+  &.ui-inputswitch-checked.ui-inputswitch-focus .ui-inputswitch-slider {
+    background: $color-blue-dark-800;
+  }
+}
+
+.ui-inputswitch.ui-state-disabled .ui-inputswitch-slider,
+.ui-inputswitch-readonly .ui-inputswitch-slider {
+  cursor: not-allowed;
+}

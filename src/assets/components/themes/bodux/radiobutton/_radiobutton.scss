@@ -1,0 +1,74 @@
+.ui-radiobutton {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  width: $unit-large;
+  height: $unit-large;
+
+  .ui-radiobutton-box {
+    border: 1px solid $color-gray-10;
+    background-color: $color-base-white;
+    width: $unit-large;
+    height: $unit-large;
+    text-align: center;
+    position: relative;
+    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    border-radius: 50%;
+
+    &:not(.ui-state-disabled):not(.ui-state-active):hover {
+      border-color: $color-gray-90;
+    }
+
+    &.ui-state-focus {
+      border-color: $color-blue-dark;
+      background-color: $color-base-white;
+      color: $color-blue-dark;
+      box-shadow: 0 0 0 0.2em $color-blue-light;
+    }
+
+    &.ui-state-active {
+      border-color: $color-blue-dark;
+      background-color: $color-blue-dark;
+      color: $color-base-white;
+
+      .ui-radiobutton-icon {
+        background-color: $color-base-white;
+      }
+
+      &:not(.ui-state-disabled):hover {
+        border-color: $color-blue-dark-800;
+        background-color: $color-blue-dark-800;
+        color: $color-base-white;
+      }
+
+      &.ui-state-focus {
+        border-color: $color-blue-dark;
+        background-color: $color-blue-dark;
+        color: $color-base-white;
+      }
+    }
+
+    .ui-radiobutton-icon {
+      background: transparent;
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -5px;
+      margin-top: -5px;
+      transition: background-color 0.2s;
+      border-radius: 50%;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  &-label {
+    margin: 0 0 0 0.5em;
+    vertical-align: middle;
+  }
+}

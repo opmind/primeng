@@ -1,0 +1,302 @@
+.ui-treetable {
+
+  .ui-treetable-thead > tr > th, .ui-treetable-tbody > tr > td, .ui-treetable-tfoot > tr > td {
+    padding: $unit-tiny $unit-small;
+  }
+
+  .ui-treetable-toggler {
+    height: $unit;
+    top: 50%;
+    margin-top: -$unit-xtiny;
+  }
+}
+
+.ui-treetable .ui-treetable-chkbox {
+  margin: 0 $unit-tiny;
+}
+
+/* Sections */
+
+.ui-treetable-caption, .ui-treetable-summary {
+  padding: $unit-tiny $unit-small;
+}
+
+.ui-treetable-caption {
+  border-bottom: 0 none;
+}
+
+.ui-treetable-summary {
+  border-top: 0 none;
+}
+
+/* Paginator */
+
+.ui-treetable {
+  .ui-paginator-top {
+    border-bottom: 0 none;
+  }
+
+  .ui-paginator-bottom {
+    border-top: 0 none;
+  }
+}
+
+/* Scrollable */
+
+.ui-treetable-scrollable-header, .ui-treetable-scrollable-footer {
+  overflow: hidden;
+  border: 0 none;
+}
+
+.ui-treetable-scrollable-body {
+  overflow: auto;
+  position: relative;
+
+  > table > .ui-treetable-tbody > tr:first-child > td {
+    border-top: 0 none;
+  }
+}
+
+.ui-treetable-virtual-table {
+  position: absolute;
+}
+
+/* Frozen Columns */
+
+.ui-treetable-frozen-view {
+  .ui-treetable-scrollable-body {
+    overflow: hidden;
+  }
+
+  > .ui-treetable-scrollable-body > table > .ui-treetable-tbody > tr > td:last-child {
+    border-right: 0 none;
+  }
+}
+
+.ui-treetable-unfrozen-view {
+  position: absolute;
+  top: 0px;
+}
+
+/* Resizable */
+
+.ui-treetable-resizable {
+  > .ui-treetable-wrapper {
+    overflow-x: auto;
+  }
+
+  .ui-treetable-thead > tr > th, .ui-treetable-tfoot > tr > td, .ui-treetable-tbody > tr > td {
+    overflow: hidden;
+  }
+
+  .ui-resizable-column {
+    background-clip: padding-box;
+    position: relative;
+  }
+}
+
+.ui-treetable-resizable-fit .ui-resizable-column:last-child .ui-column-resizer {
+  display: none;
+}
+
+.ui-treetable {
+  .ui-column-resizer {
+    display: block;
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    margin: 0;
+    width: $unit-small;
+    height: 100%;
+    padding: 0;
+    cursor: col-resize;
+    border: 1px solid transparent;
+  }
+
+  .ui-column-resizer-helper {
+    width: 1px;
+    position: absolute;
+    z-index: 10;
+    display: none;
+  }
+}
+
+/* Reorder */
+
+.ui-treetable-reorder-indicator-up, .ui-treetable-reorder-indicator-down {
+  position: absolute;
+  display: none;
+}
+
+/* Responsive */
+
+.ui-treetable-responsive .ui-treetable-tbody > tr > td .ui-column-title {
+  display: none;
+}
+
+@media screen and (max-width: 40em) {
+  .ui-treetable-responsive {
+    .ui-treetable-thead > tr > th, .ui-treetable-tfoot > tr > td {
+      display: none !important;
+    }
+
+    .ui-treetable-tbody > tr > td {
+      text-align: left;
+      display: block;
+      border: 0 none;
+      width: 100% !important;
+      box-sizing: border-box;
+      float: left;
+      clear: left;
+
+      .ui-column-title {
+        padding: $unit-tiny;
+        min-width: 30%;
+        display: inline-block;
+        margin: -$unit-tiny $unit-small -$unit-tiny -$unit-tiny;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+/* Loader */
+
+.ui-treetable-loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.ui-treetable-loading-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  margin-top: -$unit;
+  margin-left: -$unit;
+}
+
+.ui-treetable .ui-treetable-loading-icon {
+  font-size: $unit-huge;
+}
+
+.ui-treetable {
+  .ui-treetable-caption, .ui-treetable-summary {
+    background-color: $color-gray-5;
+    color: $text-color-on-light;
+    border: 1px solid $color-gray-5;
+    padding: $unit-small $unit;
+    text-align: center;
+  }
+
+  .ui-treetable-caption {
+    border-bottom: 0 none;
+    font-weight: 700;
+  }
+
+  .ui-treetable-summary {
+    border-top: 0 none;
+    font-weight: 700;
+  }
+
+  .ui-treetable-thead > tr > th {
+    padding: $unit-tiny $unit-small;
+    border: 1px solid $color-gray-10;
+    font-weight: 700;
+    color: $text-color-on-light;
+    background-color: $color-base-white;
+  }
+
+  .ui-treetable-tbody > tr > td {
+    padding: $unit-tiny $unit-small;
+  }
+
+  .ui-treetable-tfoot > tr > td {
+    padding: $unit-tiny $unit-small;
+    border: 1px solid $color-gray-10;
+    font-weight: 700;
+    color: $text-color-on-light;
+    background-color: $color-base-white;
+  }
+
+  .ui-sortable-column {
+    .ui-sortable-column-icon {
+      color: $color-gray-40;
+    }
+
+    &:not(.ui-state-highlight):hover {
+      background-color: $color-gray-5;
+      color: $text-color-on-light;
+
+      .ui-sortable-column-icon {
+        color: $text-color-on-light;
+      }
+    }
+
+    &.ui-state-highlight {
+      background-color: $color-brand-primary;
+      color: $color-base-white;
+
+      .ui-sortable-column-icon {
+        color: $color-base-white;
+      }
+    }
+  }
+
+  .ui-editable-column input {
+    font-size: $inuit-font-size-base;
+    font-family: $font-family-base;
+
+    &:focus {
+      outline: 1px solid $color-brand-primary;
+      outline-offset: 2px;
+    }
+  }
+
+  .ui-treetable-tbody > tr {
+    background-color: $color-base-white;
+    color: $text-color-on-light;
+
+    > td {
+      background-color: inherit;
+      border: 1px solid $color-gray-10;
+
+      .ui-treetable-toggler {
+        color: $color-gray-20;
+        vertical-align: middle;
+      }
+
+      .ui-treetable-chkbox {
+        vertical-align: middle;
+        margin-right: $unit-small;
+      }
+    }
+
+    &.ui-state-highlight, &.ui-contextmenu-selected {
+      background-color: $color-brand-primary;
+      color: $color-base-white;
+
+      > td {
+        background-color: inherit;
+        border: 1px solid $color-gray-10;
+
+        .ui-treetable-toggler {
+          color: $color-base-white;
+        }
+      }
+    }
+  }
+
+  &.ui-treetable-hoverable-rows .ui-treetable-tbody > tr:not(.ui-state-highlight):not(.ui-contextmenu-selected):hover {
+    cursor: pointer;
+    background-color: $color-gray-5;
+    color: $text-color-on-light;
+  }
+
+  .ui-column-resizer-helper {
+    background-color: $color-brand-primary;
+  }
+}

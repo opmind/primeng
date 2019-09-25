@@ -1,0 +1,141 @@
+.ui-menubar {
+  padding: $unit-tiny;
+
+  &:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    padding: 3px;
+    list-style: none;
+  }
+
+  .ui-menuitem-link {
+    display: block;
+    padding: $unit-tiny;
+    position: relative;
+    text-decoration: none;
+  }
+
+  .ui-menuitem-icon {
+    margin-right: $unit-tiny;
+  }
+
+  .ui-menubar-root-list {
+    display: inline-block;
+
+    > {
+      .ui-menuitem {
+        display: inline-block;
+        position: relative;
+
+        > .ui-menuitem-link {
+          padding: $unit-tiny;
+
+          > .ui-submenu-icon {
+            vertical-align: middle;
+            margin-left: $unit-tiny;
+          }
+        }
+      }
+
+      li ul {
+        display: none;
+      }
+
+      .ui-menu-separator {
+        display: inline-block;
+        vertical-align: middle;
+        height: $unit-large;
+      }
+    }
+  }
+
+  .ui-submenu-list {
+    display: none;
+    position: absolute;
+    min-width: 12.5em;
+    padding: $unit-tiny;
+
+    .ui-menuitem {
+      margin: $unit-xtiny 0;
+      position: relative;
+    }
+  }
+
+  .ui-menuitem-icon {
+    margin-right: $unit-tiny;
+    vertical-align: middle;
+  }
+
+  .ui-menuitem-text {
+    vertical-align: middle;
+  }
+
+  .ui-submenu-list .ui-menuitem-link .ui-submenu-icon {
+    position: absolute;
+    margin-top: -$unit-tiny;
+    right: 0;
+    top: 50%;
+  }
+
+  .ui-menuitem-active > .ui-submenu > .ui-submenu-list {
+    display: block;
+  }
+
+  .ui-menubar-custom {
+    float: right;
+    padding: $unit-xtiny;
+  }
+}
+
+.ui-menubar {
+  padding: 0;
+  background-color: $color-base-white;
+  border: 1px solid $color-gray-5;
+
+  .ui-menubar-root-list > {
+    .ui-menuitem > .ui-menuitem-link {
+      padding: $unit-tiny $unit-small;
+    }
+
+    .ui-menu-separator {
+      border: 1px solid $color-gray-5;
+      border-width: 0 0 0 1px;
+    }
+  }
+
+  .ui-submenu-list {
+    padding: 0;
+    background-color: $color-base-white;
+    border: 1px solid $color-gray-5;
+    -webkit-box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.16);
+    box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.16);
+
+    .ui-menuitem {
+      margin: 0;
+    }
+
+    .ui-menu-separator {
+      border: 1px solid $color-gray-5;
+      border-width: 1px 0 0 0;
+    }
+  }
+
+  .ui-menuitem {
+    margin: 0;
+
+    &.ui-menuitem-active > .ui-menuitem-link {
+      background-color: $color-gray-2;
+
+      .ui-menuitem-text, .ui-menuitem-icon, .ui-submenu-icon {
+        color: $text-color-on-light;
+      }
+    }
+  }
+}

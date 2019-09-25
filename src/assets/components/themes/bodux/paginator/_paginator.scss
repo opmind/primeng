@@ -1,0 +1,189 @@
+.ui-paginator {
+  margin: 0;
+  text-align: center;
+  padding: $unit-xtiny;
+
+  .ui-paginator-top {
+    border-bottom: 0 none;
+  }
+
+  .ui-paginator-bottom {
+    border-top: 0 none;
+  }
+
+  .ui-paginator-left-content {
+    float: left;
+  }
+
+  .ui-paginator-right-content {
+    float: right;
+  }
+
+  .ui-paginator-page, .ui-paginator-pages, .ui-paginator-next, .ui-paginator-last, .ui-paginator-first, .ui-paginator-prev, .ui-paginator-current {
+    display: inline-block;
+    min-width: $unit-large;
+    height: $unit-large;
+    line-height: $unit-large;
+    zoom: 1;
+    margin-left: $unit-xtiny;
+    margin-right: $unit-xtiny;
+    text-decoration: none;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+    outline: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .ui-paginator-pages {
+    width: auto;
+    line-height: 1;
+  }
+
+  .ui-paginator-icon {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: $unit;
+    height: $unit;
+    margin-top: -$unit-tiny;
+    margin-left: -$unit-tiny;
+  }
+
+  .ui-paginator-page, .ui-paginator-next, .ui-paginator-last, .ui-paginator-first, .ui-paginator-prev {
+    cursor: pointer;
+  }
+
+  .ui-paginator-current, .ui-paginator-rpp-options {
+    margin-left: $unit;
+    margin-right: $unit;
+    background-image: none;
+  }
+
+  .ui-paginator-jtp-select option, .ui-paginator-rpp-options option {
+    background-image: none;
+    border: 0 none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+
+  a.ui-state-disabled {
+    outline: 0 none;
+  }
+
+  .ui-dropdown {
+    min-width: $unit-huge;
+    margin-left: $unit-small;
+  }
+}
+
+.ui-fluid .ui-paginator .ui-dropdown {
+  width: auto;
+}
+
+.ui-paginator {
+  background-color: $color-base-white;
+  border: none;
+  padding: 0;
+
+  .ui-paginator-first, .ui-paginator-prev, .ui-paginator-next, .ui-paginator-last {
+    color: $color-gray-20;
+    height: $unit-huge;
+    min-width: $unit-huge;
+    border: 0 none;
+    line-height: $unit-huge;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    border-radius: 0;
+  }
+
+  .ui-paginator-first:not(.ui-state-disabled):not(.ui-state-active):hover, .ui-paginator-prev:not(.ui-state-disabled):not(.ui-state-active):hover, .ui-paginator-next:not(.ui-state-disabled):not(.ui-state-active):hover, .ui-paginator-last:not(.ui-state-disabled):not(.ui-state-active):hover {
+    background-color: $color-gray-5;
+    color: $text-color-on-light;
+  }
+
+  .ui-paginator-current {
+    color: $color-gray-20;
+    height: $unit-huge;
+    min-width: $unit-huge;
+    line-height: $unit-huge;
+  }
+
+  .ui-dropdown {
+    border: 0 none;
+
+    .ui-dropdown-trigger, .ui-dropdown-label {
+      color: $color-gray-20;
+    }
+
+    &:hover {
+      .ui-dropdown-trigger, .ui-dropdown-label {
+        color: $text-color-on-light;
+      }
+    }
+  }
+
+  .ui-paginator-first:before {
+    position: relative;
+    top: 1px;
+  }
+
+  .ui-paginator-prev:before {
+    position: relative;
+  }
+
+  .ui-paginator-next:before, .ui-paginator-last:before {
+    position: relative;
+    top: 1px;
+  }
+
+  .ui-paginator-pages {
+    vertical-align: top;
+    display: inline-block;
+    padding: 0;
+
+    .ui-paginator-page {
+      color: $color-gray-20;
+      height: $unit-huge;
+      min-width: $unit-huge;
+      border: 0 none;
+      line-height: $unit-huge;
+      padding: 0;
+      margin: 0;
+      vertical-align: top;
+      border-radius: 0;
+      outline: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      &.ui-state-active {
+        background-color: $color-brand-primary;
+        color: $color-base-white;
+      }
+
+      &:not(.ui-state-active):hover {
+        background-color: $color-gray-5;
+        color: $text-color-on-light;
+      }
+    }
+  }
+
+  .ui-dropdown {
+    margin-left: $unit-small;
+    height: $unit-huge;
+    min-width: auto;
+  }
+
+  .ui-inputtext {
+    padding: 6px 32px 6px 8px;
+  }
+}
+

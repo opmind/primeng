@@ -1,0 +1,147 @@
+.ui-carousel {
+  position: relative;
+  padding: .063em;
+
+  .ui-carousel-viewport {
+    .ui-carousel-items {
+      list-style: none outside none;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      width: 32000px;
+      left: 0;
+
+      .ui-carousel-item {
+        margin: 1px;
+        padding: 0;
+        float: left;
+        box-sizing: border-box;
+      }
+    }
+
+    overflow: hidden;
+    position: relative;
+    border: 0;
+  }
+
+  .ui-carousel-footer {
+    margin: 1px 1px 0px 1px;
+    padding: $unit-small;
+    overflow: hidden;
+  }
+
+  .ui-carousel-header {
+    margin: 0 1px;
+    overflow: hidden;
+    padding: $unit-small;
+
+    .ui-carousel-header-title {
+      display: inline-block;
+      overflow: hidden;
+    }
+  }
+
+  .ui-carousel-dropdown, .ui-carousel-mobiledropdown {
+    float: right;
+    margin: 0px $unit-small;
+    background-image: none;
+  }
+
+  .ui-carousel-dropdown option, .ui-carousel-mobiledropdown option {
+    background-image: none;
+    border: 0 none;
+    box-shadow: none;
+  }
+
+  .ui-carousel-button {
+    float: right;
+    margin: $unit-xtiny;
+  }
+
+  .ui-carousel-page-link {
+    float: left;
+    margin: 0 $unit-xtiny;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .ui-carousel-button {
+    cursor: pointer;
+  }
+
+  .ui-carousel-page-links {
+    margin: 0px $unit-small;
+    margin-top: $unit-xtiny;
+    float: right;
+  }
+
+  .ui-carousel-mobiledropdown {
+    display: none;
+  }
+}
+
+.ui-carousel {
+  padding: 0;
+
+  .ui-carousel-header {
+    background-color: $color-base-white;
+    color: $text-color-on-light;
+    padding: $unit-tiny $unit-small;
+    border: 1px solid $color-gray-5;
+    margin: 0;
+    font-weight: 700;
+
+    .ui-carousel-header-title {
+      padding: 0;
+    }
+  }
+
+  .ui-carousel-viewport {
+    border: 1px solid $color-gray-5;
+    background-color: $color-base-white;
+    color: $text-color-on-light;
+    padding: 0;
+
+    .ui-carousel-items .ui-carousel-item {
+      border: 1px solid $color-gray-5;
+    }
+  }
+
+  .ui-carousel-footer {
+    background-color: $color-base-white;
+    color: $text-color-on-light;
+    padding: $unit-tiny $unit-small;
+    border: 1px solid $color-gray-5;
+    margin: 0;
+  }
+
+  .ui-carousel-button {
+    color: $color-gray-10;
+    transition: color 0.2s;
+
+    &.ui-carousel-next-button:before {
+      content: "";
+    }
+
+    &.ui-carousel-prev-button:before {
+      content: "";
+    }
+
+    &:not(.ui-state-disabled):hover {
+      color: $text-color-on-light;
+    }
+  }
+
+  .ui-carousel-page-links {
+    margin: $unit-xtiny $unit-small;
+
+    .ui-carousel-page-link {
+      color: $color-gray-10;
+      transition: color 0.2s;
+
+      &:hover {
+        color: $text-color-on-light;
+      }
+    }
+  }
+}

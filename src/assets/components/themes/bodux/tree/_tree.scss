@@ -1,0 +1,221 @@
+.ui-tree {
+  width: 18em;
+
+  .ui-tree-container {
+    padding: $unit-tiny;
+  }
+}
+
+.ui-tree-empty-message {
+  padding: $unit-tiny;
+}
+
+.ui-tree {
+  .ui-treenode-children {
+    margin: 0;
+    padding: 0 0 0 $unit-xtiny;
+  }
+
+  .ui-treenode {
+    padding: $unit-xtiny 0 0 0;
+  }
+
+  .ui-treenode-droppoint {
+    height: 4px;
+    list-style-type: none;
+  }
+
+  .ui-treenode-droppoint-active {
+    border: 0 none;
+  }
+
+  .ui-treenode-label {
+    padding: 0 $unit-tiny;
+
+    &.ui-state-hover, &.ui-state-highlight {
+      border: 0 none;
+    }
+  }
+
+  .ui-tree-filter {
+    padding-right: $unit-large;
+  }
+
+  .ui-tree-filter-container {
+    padding: $unit-tiny;
+
+    .ui-tree-filter-icon {
+      position: absolute;
+      top: $unit;
+      right: $unit;
+    }
+  }
+}
+
+/** Horizontal Tree **/
+
+.ui-tree-horizontal {
+  width: auto;
+  padding: $unit-small 0;
+}
+
+.ui-tree-horizontal .ui-treenode-content {
+  padding: $unit-tiny $unit-small $unit-tiny $unit-xtiny;
+}
+
+.ui-tree.ui-tree-horizontal .ui-tree-node-label {
+  margin: 0;
+}
+
+.ui-tree {
+  &.ui-tree-horizontal {
+    .ui-treenode {
+      padding: $unit-small $unit-xhuge;
+
+      &.ui-treenode-leaf, &.ui-treenode-collapsed {
+        padding-right: 0;
+      }
+    }
+
+    .ui-chkbox {
+      margin-right: $unit-tiny;
+    }
+  }
+
+  &.ui-tree-loading {
+    min-height: 4em;
+  }
+
+  .ui-tree-loading-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    margin-top: -$unit;
+    margin-left: -$unit;
+
+    .ui-tree-loading-icon {
+      font-size: $unit-huge;
+    }
+  }
+}
+
+.ui-tree {
+  border: 1px solid $color-gray-5;
+  background-color: $color-base-white;
+  color: $text-color-on-light;
+  padding: $unit-tiny;
+
+  .ui-tree-container {
+    padding: $unit-tiny;
+    margin: 0;
+
+    .ui-treenode {
+      padding: $unit-xtiny 0;
+
+      .ui-treenode-content {
+        padding: 0;
+        border: 1px solid transparent;
+
+        .ui-tree-toggler {
+          vertical-align: middle;
+          display: inline-block;
+          float: none;
+          margin: 0 $unit-xtiny 0 0;
+          color: $color-gray-10;
+        }
+
+        .ui-treenode-icon {
+          vertical-align: middle;
+          display: inline-block;
+          margin: 0 $unit-xtiny 0 0;
+          color: $color-gray-10;
+        }
+
+        .ui-treenode-label {
+          margin: 0;
+          vertical-align: middle;
+          display: inline-block;
+          padding: $unit-tiny;
+
+          &.ui-state-highlight {
+            background-color: $color-brand-primary;
+            color: $color-base-white;
+          }
+        }
+
+        .ui-chkbox {
+          margin: 0 $unit-small 0 0;
+
+          .ui-chkbox-icon {
+            margin: 1px 0 0 0;
+          }
+        }
+
+        &.ui-treenode-selectable .ui-treenode-label:not(.ui-state-highlight):hover {
+          background-color: $color-base-white;
+          color: $text-color-on-light;
+        }
+
+        > span {
+          line-height: inherit;
+        }
+
+        &.ui-treenode-dragover {
+          background-color: $color-base-white;
+          color: $text-color-on-light;
+        }
+      }
+    }
+
+    .ui-treenode-droppoint.ui-treenode-droppoint-active {
+      background-color: $color-brand-primary;
+    }
+  }
+
+  &.ui-tree-horizontal {
+    padding-left: 0;
+    padding-right: 0;
+
+    .ui-treenode .ui-treenode-content {
+      border: 1px solid $color-gray-5;
+      background-color: $color-base-white;
+      color: $text-color-on-light;
+      padding: $unit-tiny $unit-small;
+
+      &.ui-state-highlight {
+        background-color: $color-brand-primary;
+        color: $color-base-white;
+      }
+
+      .ui-chkbox .ui-icon {
+        color: $color-brand-primary;
+      }
+
+      .ui-treenode-label:not(.ui-state-highlight):hover {
+        background-color: inherit;
+        color: inherit;
+      }
+
+      &.ui-treenode-selectable:not(.ui-state-highlight):hover {
+        background-color: $color-base-white;
+        color: $text-color-on-light;
+      }
+    }
+  }
+
+  .ui-tree-filter-container {
+    .ui-tree-filter {
+      width: 100%;
+      padding-right: $unit-huge;
+    }
+
+    .ui-tree-filter-icon {
+      top: 50%;
+      left: auto;
+      margin-top: -$unit-tiny;
+      right: $unit-small;
+      color: $color-brand-primary;
+    }
+  }
+}

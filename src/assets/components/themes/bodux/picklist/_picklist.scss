@@ -1,0 +1,294 @@
+.ui-picklist {
+  display: table;
+
+  > div {
+    float: left;
+  }
+
+  .ui-picklist-buttons {
+    height: 12.5em;
+    padding: 0 $unit-tiny;
+  }
+
+  .ui-picklist-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    height: 12.5em;
+    width: 12.5em;
+
+    li {
+      margin: 1px;
+      padding: $unit-xtiny;
+    }
+  }
+
+  .ui-button {
+    display: block;
+    margin-bottom: $unit-tiny;
+  }
+
+  .ui-button-text-icon-left {
+    width: 100%;
+  }
+
+  .ui-picklist-item {
+    cursor: pointer;
+    border: 0 none;
+    font-weight: inherit;
+  }
+
+  .ui-picklist-caption {
+    text-align: center;
+    padding: $unit-tiny $unit-small;
+    border-bottom: 0 none;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .ui-picklist-filter-container {
+    position: relative;
+    width: 100%;
+    padding: $unit-small;
+    border-bottom: 0 none;
+
+    .ui-picklist-filter {
+      text-indent: 1.1em;
+      width: 100%;
+    }
+
+    .ui-picklist-filter-icon {
+      position: absolute;
+      top: 50%;
+      left: $unit;
+      margin-top: -$unit-tiny;
+    }
+  }
+
+  > div {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  .ui-picklist-buttons {
+    vertical-align: middle;
+  }
+
+  &.ui-picklist-vertical {
+    display: table;
+
+    > div {
+      float: none;
+      display: table-row;
+      vertical-align: top;
+    }
+
+    .ui-picklist-buttons {
+      text-align: center;
+      height: auto;
+
+      .ui-button {
+        display: inline-block;
+      }
+    }
+
+    .ui-button {
+      margin-top: $unit-tiny;
+    }
+  }
+}
+
+/* Vertical */
+
+.ui-picklist-outline {
+  outline: 1px dotted black;
+  z-index: 1;
+}
+
+.ui-picklist {
+  .ui-picklist-droppoint {
+    height: 6px;
+    list-style-type: none;
+  }
+
+  .ui-picklist-list .ui-picklist-droppoint-empty {
+    height: 100%;
+    list-style-type: none;
+  }
+}
+
+.ui-picklist-list {
+  &.ui-picklist-source, &.ui-picklist-target {
+    outline: none;
+  }
+}
+
+/* Responsive */
+
+.ui-picklist.ui-picklist-responsive {
+  * {
+    box-sizing: border-box;
+  }
+
+  width: 100%;
+
+  .ui-picklist-listwrapper {
+    width: 35%;
+
+    &.ui-picklist-listwrapper-nocontrols {
+      width: 45%;
+    }
+  }
+
+  .ui-picklist-buttons {
+    width: 10%;
+
+    button {
+      width: 100%;
+    }
+  }
+
+  .ui-picklist-list {
+    width: auto;
+  }
+}
+
+/* Responsive */
+@media (max-width: 40em) {
+  .ui-picklist.ui-picklist-responsive {
+    display: block;
+
+    > div {
+      display: block;
+      width: 100% !important;
+    }
+
+    .ui-picklist-buttons {
+      text-align: center;
+      height: auto;
+      padding: .4em 0;
+
+      button {
+        display: inline-block;
+        width: 20%;
+        margin-bottom: 0;
+        margin-right: $unit-tiny;
+      }
+    }
+
+    .ui-picklist-source-controls.ui-picklist-buttons {
+      padding-bottom: $unit-small;
+    }
+
+    .ui-picklist-target-controls.ui-picklist-buttons {
+      padding-top: $unit-small;
+    }
+
+    .ui-picklist-buttons {
+      .pi-angle-right::before {
+        content: "\e930";
+      }
+
+      .pi-angle-double-right::before {
+        content: "\e92c";
+      }
+
+      .pi-angle-left::before {
+        content: "\e933";
+      }
+
+      .pi-angle-double-left::before {
+        content: "\e92f";
+      }
+    }
+  }
+}
+
+.ui-picklist {
+  .ui-picklist-buttons button {
+    font-size: $inuit-font-size-large;
+  }
+
+  .ui-picklist-caption {
+    background-color: $color-base-white;
+    color: $text-color-on-light;
+    border: 1px solid $color-gray-5;
+    padding: $unit-tiny $unit-small;
+    font-weight: 700;
+    border-bottom: 0 none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+
+  .ui-picklist-filter-container {
+    padding: $unit-tiny $unit-small $unit-tiny $unit-small;
+    border: 1px solid $color-gray-5;
+    color: $text-color-on-light;
+    background-color: $color-base-white;
+    margin: 0;
+    border-bottom: 0 none;
+
+    input.ui-picklist-filter {
+      width: 100%;
+      padding-right: $unit-huge;
+      text-indent: 0;
+    }
+
+    .ui-picklist-filter-icon {
+      top: 50%;
+      margin-top: -$unit-tiny;
+      left: auto;
+      right: $unit-large;
+      color: $color-brand-primary;
+    }
+  }
+
+  .ui-picklist-buttons {
+    padding: $unit-tiny $unit-small;
+  }
+
+  .ui-picklist-list {
+    border: 1px solid $color-gray-5;
+    background-color: $color-base-white;
+    color: $text-color-on-light;
+    padding: 0;
+
+    .ui-picklist-item {
+      padding: $unit-tiny $unit-small;
+      margin: 0;
+      border: 0 none;
+      color: $text-color-on-light;
+      background-color: transparent;
+      outline: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:not(.ui-state-highlight):hover {
+        background-color: $color-gray-5;
+        color: $text-color-on-light;
+      }
+
+      &.ui-state-highlight {
+        background-color: $color-brand-primary;
+        color: $color-base-white;
+      }
+    }
+
+    .ui-picklist-droppoint-highlight {
+      background-color: $color-brand-primary;
+    }
+  }
+}
+
+@media (max-width: 40em) {
+  body .ui-picklist.ui-picklist-responsive .ui-picklist-buttons {
+    padding: $unit-tiny $unit-small;
+  }
+}

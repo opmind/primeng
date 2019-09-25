@@ -1,0 +1,214 @@
+.ui-multiselect {
+  .ui-multiselect-trigger {
+    width: 1.5em;
+    padding: 0 $unit-tiny;
+
+    .ui-multiselect-trigger-icon {
+      margin-top: -$unit-tiny;
+      margin-left: -$unit-tiny;
+    }
+  }
+
+  .ui-multiselect-label {
+    padding: $unit-tiny $unit-huge $unit-tiny $unit-tiny;
+  }
+
+  &.ui-state-disabled .ui-multiselect-trigger, &.ui-state-disabled .ui-multiselect-label {
+    cursor: not-allowed;
+  }
+
+  &-panel {
+    padding: $unit-tiny;
+    min-width: 12em;
+
+    .ui-multiselect-items-wrapper {
+      padding: $unit-tiny 0;
+    }
+
+    .ui-multiselect-list {
+      border: 0 none;
+    }
+
+    .ui-multiselect-item {
+      border: 0 none;
+      padding: $unit-xtiny $unit-tiny;
+    }
+
+    .ui-multiselect-empty-message {
+      padding: $unit-small;
+    }
+  }
+
+  &-header {
+    margin-bottom: $unit-tiny;
+    padding: $unit-tiny;
+    min-height: $unit-huge;
+
+    .ui-multiselect-filter-container {
+
+      .ui-multiselect-filter-icon {
+        top: $unit-tiny;
+        left: $unit-xtiny;
+      }
+    }
+
+    .ui-inputtext {
+      padding: $unit-xtiny $unit-xtiny $unit-xtiny $unit-large;
+    }
+
+    .ui-multiselect-close {
+      right: $unit-small;
+      top: $unit-small;
+      border: 0 none;
+    }
+
+    a.ui-multiselect-all, a.ui-multiselect-none {
+      margin-right: 10px;
+    }
+  }
+
+  &-footer {
+    padding: $unit-tiny;
+  }
+}
+
+
+.ui-multiselect {
+  background: $color-base-white;
+  border: 1px solid $color-gray-5;
+  transition: border-color 0.2s;
+
+  &:not(.ui-state-disabled) {
+    &:hover {
+      border-color: #212121;
+    }
+
+    &.ui-state-focus {
+      border-color: $color-brand-primary;
+      outline: 0 none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+
+  .ui-multiselect-label {
+    padding: $unit-tiny;
+    padding-right: $unit-huge;
+    color: $text-color-on-light;
+  }
+
+  .ui-multiselect-trigger {
+    background-color: $color-base-white;
+    width: $unit-huge;
+    line-height: $unit-huge;
+    text-align: center;
+    padding: 0;
+    color: $color-gray-10;
+  }
+}
+
+.ui-multiselect-panel {
+  padding: 0;
+  border: 1px solid $color-gray-5;
+  background-color: $color-base-white;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+
+  .ui-multiselect-header {
+    padding: $unit-tiny $unit-small $unit-tiny $unit-small;
+    border-bottom: 1px solid $color-gray-5;
+    color: $text-color-on-light;
+    background-color: $color-base-white;
+    margin: 0;
+
+    .ui-multiselect-filter-container {
+      float: none;
+      width: 70%;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 0;
+
+      .ui-inputtext {
+        padding: $unit-tiny;
+        padding-right: $unit-huge;
+      }
+
+      .ui-multiselect-filter-icon {
+        color: $color-brand-primary;
+        top: 50%;
+        margin-top: -$unit-tiny;
+        right: $unit-small;
+        left: auto;
+      }
+    }
+
+    .ui-chkbox {
+      margin-right: $unit-small;
+      float: none;
+      vertical-align: middle;
+    }
+
+    .ui-multiselect-close {
+      color: $color-gray-40;
+      top: 50%;
+      margin-top: -$unit-small;
+      transition: color 0.2s;
+
+      &:hover {
+        color: $text-color-on-light;
+      }
+    }
+  }
+
+  .ui-multiselect-items {
+    padding: 0;
+
+    .ui-multiselect-item {
+      margin: 0;
+      padding: $unit-tiny $unit-small;
+      border: 0 none;
+      color: $text-color-on-light;
+      background-color: transparent;
+      border-radius: 0;
+      outline: none !important;
+
+      &:focus {
+        outline: none !important;
+      }
+
+      &.ui-state-highlight {
+        color: $color-base-white;
+        background-color: $color-brand-primary;
+      }
+
+      &:not(.ui-state-highlight):not(.ui-state-disabled):hover {
+        color: $text-color-on-light;
+        background-color: $color-gray-5;
+      }
+
+      &.ui-state-disabled .ui-chkbox-box {
+        cursor: auto;
+
+        &:hover {
+          border: 1px solid $color-gray-10;
+        }
+
+        &.ui-state-active:hover {
+          border-color: $color-brand-primary;
+        }
+      }
+
+      .ui-chkbox {
+        position: static;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 $unit-small 0 0;
+      }
+
+      label {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+}

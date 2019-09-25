@@ -1,0 +1,130 @@
+.ui-listbox {
+  width: 10em;
+
+  .ui-listbox-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ui-listbox-item {
+    padding: $unit-tiny;
+    border: 0 none;
+    margin-bottom: 1px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.ui-state-disabled .ui-listbox-item {
+    cursor: not-allowed;
+  }
+
+  &-header {
+    margin-bottom: $unit-tiny;
+    padding: $unit-xtiny $unit-tiny;
+
+    .ui-listbox-filter-container {
+
+      .ui-listbox-filter-icon {
+        top: $unit-tiny;
+        left: $unit-tiny;
+      }
+    }
+
+    &.ui-listbox-header-w-checkbox .ui-listbox-filter-container {
+      width: calc(100% - 2em);
+    }
+
+    .ui-inputtext {
+      padding: $unit-xtiny $unit-xtiny $unit-xtiny $unit-large;
+    }
+  }
+
+  &-footer {
+    padding: $unit-xtiny $unit-tiny;
+  }
+}
+
+.ui-listbox {
+  padding: 0;
+  min-width: 12em;
+  background: $color-base-white;
+  border: 1px solid $color-gray-10;
+
+  .ui-chkbox {
+    margin: 0 $unit-tiny 0 0;
+  }
+
+  .ui-listbox-header {
+    padding: $unit-small $unit $unit-small $unit;
+    border-bottom: 1px solid $color-gray-5;
+    color: $text-color-on-light;
+    background-color: $color-base-white;
+    margin: 0;
+
+    .ui-listbox-filter-container {
+      width: calc(100% - (#{$unit} + #{$unit} + #{$unit-small}));
+
+      input {
+        padding: $unit-small;
+        padding-right: $unit-huge;
+      }
+
+      .ui-listbox-filter-icon {
+        top: 50%;
+        left: auto;
+        margin-top: -$unit-tiny;
+        right: $unit-small;
+        color: $color-brand-primary;
+      }
+    }
+  }
+
+  .ui-listbox-list {
+    background-color: $color-base-white;
+
+    .ui-listbox-item {
+      margin: 0;
+      padding: $unit-tiny $unit;
+      border: 0 none;
+      color: $text-color-on-light;
+      background-color: transparent;
+      border-radius: 0;
+
+      &.ui-state-highlight {
+        color: $color-base-white;
+        background-color: $color-brand-primary;
+      }
+
+      .ui-chkbox {
+        position: static;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 $unit-small 0 0;
+      }
+
+      label {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &:not(.ui-state-disabled) .ui-listbox-item:not(.ui-state-highlight):not(.ui-state-disabled):hover {
+    color: $text-color-on-light;
+    background-color: $color-gray-5;
+  }
+
+  &.ui-state-disabled .ui-chkbox-box:not(.ui-state-disabled):not(.ui-state-active):hover {
+    border: 1px solid $color-gray-10;
+  }
+
+  .ui-listbox-footer {
+    padding: $unit-small $unit $unit-small $unit;
+    border-top: 1px solid $color-gray-5;
+    color: $text-color-on-light;
+    background-color: $color-base-white;
+  }
+}

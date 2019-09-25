@@ -1,0 +1,291 @@
+.ui-tabview {
+  padding: $unit-small;
+
+  .ui-tabview-nav {
+    margin: 0;
+
+    li {
+      list-style: none;
+      float: left;
+      position: relative;
+      margin: 0 $unit-tiny 1px 0;
+      padding: 0;
+      white-space: nowrap;
+      outline: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      a {
+        float: left;
+        padding: $unit-tiny $unit-small;
+        text-decoration: none;
+      }
+
+      &.ui-tabview-selected a, &.ui-state-disabled a, &.ui-state-processing a {
+        cursor: text;
+      }
+
+      a {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &.ui-tabview-collapsible .ui-tabview-nav li.ui-tabview-selected a {
+    cursor: pointer;
+  }
+
+  .ui-tabview-panel {
+    border-width: 0;
+    padding: $unit-small;
+    background: none;
+  }
+
+  .ui-tabview-nav li {
+    display: block;
+
+    .ui-tabview-left-icon {
+      margin-right: $unit-tiny;
+      vertical-align: middle;
+    }
+
+    .ui-tabview-right-icon {
+      margin-left: $unit-tiny;
+      vertical-align: middle;
+    }
+  }
+
+  .ui-tabview-title {
+    vertical-align: middle;
+  }
+
+  .ui-tabview-nav li .ui-tabview-close {
+    margin: $unit-small $unit-tiny 0 0;
+    cursor: pointer;
+  }
+
+  &.ui-tabview-top > .ui-tabview-nav {
+    li {
+      border-bottom: 0;
+      top: 1px;
+    }
+
+    padding: $unit-tiny $unit-tiny 0;
+  }
+
+  &.ui-tabview-bottom > .ui-tabview-nav {
+    padding: 0 $unit-tiny $unit-tiny;
+
+    li {
+      border-top: 0;
+    }
+  }
+}
+
+/* per orientation settings */
+/* top and bottom */
+
+/* left and right*/
+
+.ui-tabview-left::after, .ui-tabview-right::after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+.ui-tabview-left > {
+  .ui-tabview-nav {
+    float: left;
+    width: 25%;
+    height: 300px;
+    background-image: none;
+    padding-top: 1px;
+  }
+
+  .ui-tabview-panels {
+    float: right;
+    width: 75%;
+  }
+}
+
+.ui-tabview {
+  &.ui-tabview-left > .ui-tabview-nav li, &.ui-tabview-right > .ui-tabview-nav li {
+    display: block;
+    float: right;
+    white-space: normal;
+    width: 99%;
+  }
+
+  &.ui-tabview-left > .ui-tabview-nav li {
+    margin: 0 0 1px 0;
+    border-right: 0 none;
+  }
+
+  &.ui-tabview-right > {
+    .ui-tabview-nav {
+      float: right;
+      width: 25%;
+      height: 300px;
+      background-image: none;
+      padding-top: 1px;
+    }
+
+    .ui-tabview-panels {
+      float: left;
+      width: 75%;
+    }
+
+    .ui-tabview-nav li {
+      margin: 0 0 1px 0;
+      border-left: 0 none;
+    }
+  }
+}
+
+/* RTL */
+
+.ui-rtl .ui-tabview .ui-tabview-nav li {
+  float: right;
+}
+
+.ui-tabview {
+  &.ui-tabview-top, &.ui-tabview-bottom, &.ui-tabview-left, &.ui-tabview-right {
+    border: 0 none;
+  }
+
+  &.ui-tabview-top .ui-tabview-nav, &.ui-tabview-bottom .ui-tabview-nav, &.ui-tabview-left .ui-tabview-nav, &.ui-tabview-right .ui-tabview-nav {
+    padding: 0;
+    background: transparent;
+    border: 0 none;
+  }
+
+  &.ui-tabview-top .ui-tabview-nav li, &.ui-tabview-bottom .ui-tabview-nav li, &.ui-tabview-left .ui-tabview-nav li, &.ui-tabview-right .ui-tabview-nav li {
+    border: 1px solid $color-gray-5;
+    background-color: $color-base-white;
+    transition: background-color 0.2s;
+  }
+
+  &.ui-tabview-top .ui-tabview-nav li a, &.ui-tabview-bottom .ui-tabview-nav li a, &.ui-tabview-left .ui-tabview-nav li a, &.ui-tabview-right .ui-tabview-nav li a {
+    float: none;
+    display: inline-block;
+    color: $text-color-on-light;
+    padding: $unit-tiny $unit-small;
+    font-weight: 700;
+  }
+
+  &.ui-tabview-top .ui-tabview-nav li a .ui-tabview-left-icon, &.ui-tabview-bottom .ui-tabview-nav li a .ui-tabview-left-icon, &.ui-tabview-left .ui-tabview-nav li a .ui-tabview-left-icon, &.ui-tabview-right .ui-tabview-nav li a .ui-tabview-left-icon {
+    margin-right: $unit-small;
+  }
+
+  &.ui-tabview-top .ui-tabview-nav li a .ui-tabview-right-icon, &.ui-tabview-bottom .ui-tabview-nav li a .ui-tabview-right-icon, &.ui-tabview-left .ui-tabview-nav li a .ui-tabview-right-icon, &.ui-tabview-right .ui-tabview-nav li a .ui-tabview-right-icon {
+    margin-left: $unit-small;
+  }
+
+  &.ui-tabview-top .ui-tabview-nav li .ui-tabview-close, &.ui-tabview-bottom .ui-tabview-nav li .ui-tabview-close, &.ui-tabview-left .ui-tabview-nav li .ui-tabview-close, &.ui-tabview-right .ui-tabview-nav li .ui-tabview-close {
+    color: $color-gray-20;
+    margin: 0 $unit-small 0 0;
+    vertical-align: middle;
+  }
+
+  &.ui-tabview-top .ui-tabview-nav li:not(.ui-state-active):not(.ui-state-disabled):hover, &.ui-tabview-bottom .ui-tabview-nav li:not(.ui-state-active):not(.ui-state-disabled):hover, &.ui-tabview-left .ui-tabview-nav li:not(.ui-state-active):not(.ui-state-disabled):hover, &.ui-tabview-right .ui-tabview-nav li:not(.ui-state-active):not(.ui-state-disabled):hover {
+    background-color: $color-gray-5;
+    border: 1px solid $color-gray-5;
+  }
+
+  &.ui-tabview-top .ui-tabview-nav li:not(.ui-state-active):not(.ui-state-disabled):hover a, &.ui-tabview-bottom .ui-tabview-nav li:not(.ui-state-active):not(.ui-state-disabled):hover a, &.ui-tabview-left .ui-tabview-nav li:not(.ui-state-active):not(.ui-state-disabled):hover a, &.ui-tabview-right .ui-tabview-nav li:not(.ui-state-active):not(.ui-state-disabled):hover a, &.ui-tabview-top .ui-tabview-nav li:not(.ui-state-active):not(.ui-state-disabled):hover .ui-tabview-close, &.ui-tabview-bottom .ui-tabview-nav li:not(.ui-state-active):not(.ui-state-disabled):hover .ui-tabview-close, &.ui-tabview-left .ui-tabview-nav li:not(.ui-state-active):not(.ui-state-disabled):hover .ui-tabview-close, &.ui-tabview-right .ui-tabview-nav li:not(.ui-state-active):not(.ui-state-disabled):hover .ui-tabview-close {
+    color: $text-color-on-light;
+  }
+
+  &.ui-tabview-top .ui-tabview-nav li.ui-state-active, &.ui-tabview-bottom .ui-tabview-nav li.ui-state-active, &.ui-tabview-left .ui-tabview-nav li.ui-state-active, &.ui-tabview-right .ui-tabview-nav li.ui-state-active {
+    background-color: $color-brand-primary;
+    border: 1px solid $color-brand-primary;
+  }
+
+  &.ui-tabview-top .ui-tabview-nav li.ui-state-active a, &.ui-tabview-bottom .ui-tabview-nav li.ui-state-active a, &.ui-tabview-left .ui-tabview-nav li.ui-state-active a, &.ui-tabview-right .ui-tabview-nav li.ui-state-active a, &.ui-tabview-top .ui-tabview-nav li.ui-state-active .ui-tabview-close, &.ui-tabview-bottom .ui-tabview-nav li.ui-state-active .ui-tabview-close, &.ui-tabview-left .ui-tabview-nav li.ui-state-active .ui-tabview-close, &.ui-tabview-right .ui-tabview-nav li.ui-state-active .ui-tabview-close {
+    color: $color-base-white;
+  }
+
+  &.ui-tabview-top .ui-tabview-nav li.ui-state-active:hover, &.ui-tabview-bottom .ui-tabview-nav li.ui-state-active:hover, &.ui-tabview-left .ui-tabview-nav li.ui-state-active:hover, &.ui-tabview-right .ui-tabview-nav li.ui-state-active:hover {
+    border: 1px solid $color-blue-dark-800;
+    background-color: $color-blue-dark-800;
+  }
+
+  &.ui-tabview-top .ui-tabview-nav li.ui-state-active:hover a, &.ui-tabview-bottom .ui-tabview-nav li.ui-state-active:hover a, &.ui-tabview-left .ui-tabview-nav li.ui-state-active:hover a, &.ui-tabview-right .ui-tabview-nav li.ui-state-active:hover a {
+    color: $color-base-white;
+  }
+
+  &.ui-tabview-top .ui-tabview-nav li.ui-state-active:hover a {
+    .ui-tabview-left-icon, .ui-tabview-right-icon {
+      color: $color-base-white;
+    }
+  }
+
+  &.ui-tabview-bottom .ui-tabview-nav li.ui-state-active:hover a {
+    .ui-tabview-left-icon, .ui-tabview-right-icon {
+      color: $color-base-white;
+    }
+  }
+
+  &.ui-tabview-left .ui-tabview-nav li.ui-state-active:hover a {
+    .ui-tabview-left-icon, .ui-tabview-right-icon {
+      color: $color-base-white;
+    }
+  }
+
+  &.ui-tabview-right .ui-tabview-nav li.ui-state-active:hover a {
+    .ui-tabview-left-icon, .ui-tabview-right-icon {
+      color: $color-base-white;
+    }
+  }
+
+  &.ui-tabview-top .ui-tabview-nav li.ui-tabview-selected a, &.ui-tabview-bottom .ui-tabview-nav li.ui-tabview-selected a, &.ui-tabview-left .ui-tabview-nav li.ui-tabview-selected a, &.ui-tabview-right .ui-tabview-nav li.ui-tabview-selected a {
+    cursor: pointer;
+  }
+
+  &.ui-tabview-top .ui-tabview-nav {
+    margin-bottom: -1px;
+
+    li {
+      margin-right: 2px;
+    }
+  }
+
+  &.ui-tabview-bottom .ui-tabview-nav {
+    margin-top: -1px;
+
+    li {
+      margin-right: 2px;
+    }
+  }
+
+  &.ui-tabview-left .ui-tabview-nav {
+    margin-right: -1px;
+
+    li {
+      margin-bottom: 2px;
+    }
+  }
+
+  &.ui-tabview-right .ui-tabview-nav {
+    margin-right: -1px;
+
+    li {
+      margin-bottom: 2px;
+    }
+  }
+
+  .ui-tabview-panels {
+    background-color: $color-base-white;
+    padding: $unit-tiny $unit-small;
+    border: 1px solid $color-gray-5;
+    color: $text-color-on-light;
+
+    .ui-tabview-panel {
+      padding: 0;
+    }
+  }
+}
