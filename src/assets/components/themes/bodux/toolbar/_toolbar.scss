@@ -1,0 +1,15 @@
+.ui-toolbar {
+  background-color: $color-base-white;
+  padding: $unit-tiny 0;
+
+  button {
+    vertical-align: middle;
+  }
+
+  .ui-toolbar-separator {
+    vertical-align: middle;
+    color: $color-gray-5;
+    margin: 0 $unit-xtiny;
+  }
+}
+

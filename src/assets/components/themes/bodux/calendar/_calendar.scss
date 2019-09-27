@@ -1,0 +1,194 @@
+.ui-datepicker {
+  padding: $unit-tiny;
+  min-width: 20em;
+  background-color: $color-base-white;
+  color: $text-color-on-light;
+  border: 1px solid $color-gray-5;
+
+  &:not(.ui-datepicker-inline) {
+    border: 1px solid $color-gray-5;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  }
+
+  &:not(.ui-state-disabled) {
+    .ui-datepicker-header {
+      .ui-datepicker-prev:hover, .ui-datepicker-next:hover {
+        color: $color-brand-primary;
+      }
+
+      .ui-datepicker-prev:focus, .ui-datepicker-next:focus {
+        outline: 0 none;
+        color: $color-brand-primary;
+      }
+    }
+
+    table td a:not(.ui-state-active):not(.ui-state-highlight):hover, .ui-monthpicker a.ui-monthpicker-month:not(.ui-state-active):hover {
+      background-color: $color-gray-2;
+    }
+  }
+
+  .ui-datepicker-header {
+    padding: $unit-tiny $unit-small $unit-tiny $unit-small;
+    background-color: $color-base-white;
+    color: $text-color-on-light;
+    border-radius: 0;
+
+    .ui-datepicker-prev, .ui-datepicker-next {
+      cursor: pointer;
+      top: 0;
+      color: $color-gray-5;
+      -moz-transition: color 0.2s;
+      -o-transition: color 0.2s;
+      -webkit-transition: color 0.2s;
+      transition: color 0.2s;
+    }
+
+    .ui-datepicker-title {
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+
+      select {
+        margin-top: -$unit-tiny;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  table {
+    font-size: $inuit-font-size-base;
+    margin: $unit-small 0 0 0;
+
+    th {
+      padding: $unit-tiny;
+
+      &.ui-datepicker-weekheader {
+        border-right: 1px solid $color-gray-5;
+      }
+    }
+
+    td {
+      padding: $unit-tiny;
+
+      > {
+        a, span {
+          display: block;
+          text-align: center;
+          color: $text-color-on-light;
+          padding: $unit-xtiny;
+          border-radius: 3px;
+        }
+
+        a.ui-state-active, span.ui-state-active {
+          color: $color-base-white;
+          background-color: $color-brand-primary;
+        }
+
+        a {
+          cursor: pointer;
+        }
+      }
+
+      &.ui-datepicker-today > {
+        a, span {
+          background-color: $color-gray-5;
+          color: $text-color-on-light;
+        }
+
+        a.ui-state-active, span.ui-state-active {
+          color: $color-base-white;
+          background-color: $color-brand-primary;
+        }
+      }
+
+      &.ui-datepicker-weeknumber {
+        border-right: 1px solid $color-gray-5;
+      }
+    }
+  }
+
+  .ui-datepicker-buttonbar {
+    border-top: 1px solid $color-gray-5;
+  }
+
+  .ui-timepicker {
+    border: 0 none;
+    border-top: 1px solid $color-gray-5;
+    padding: 0.857em;
+
+    a {
+      color: $text-color-on-light;
+      font-size: 1.286em;
+
+      &:hover {
+        color: $color-brand-primary;
+      }
+    }
+
+    span {
+      font-size: $inuit-font-size-large;
+    }
+  }
+
+  .ui-monthpicker .ui-monthpicker-month {
+    color: $text-color-on-light;
+
+    &.ui-state-active {
+      color: $color-base-white;
+      background-color: $color-brand-primary;
+    }
+  }
+
+  &.ui-datepicker-timeonly {
+    padding: 0;
+
+    .ui-timepicker {
+      border-top: 0 none;
+    }
+  }
+
+  &.ui-datepicker-multiple-month .ui-datepicker-group {
+    border-right: 1px solid $color-gray-5;
+    padding-right: $unit-small;
+    padding-left: $unit-small;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      border-right: 0 none;
+    }
+  }
+}
+
+.ui-calendar {
+  display: inline-flex;
+}
+
+.ui-calendar.ui-calendar-w-btn {
+  .ui-inputtext {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0 none;
+
+    &:enabled {
+      &:hover:not(.ui-state-error), &:focus:not(.ui-state-error) {
+        border-right: 0 none;
+      }
+    }
+  }
+
+  .ui-datepicker-trigger.ui-button {
+    width: $unit-huge;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.ui-fluid .ui-calendar.ui-calendar-w-btn input.ui-inputtext {
+  width: calc(100% - #{$unit-huge});
+}

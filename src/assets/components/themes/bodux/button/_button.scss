@@ -90,6 +90,12 @@
     border-radius: $global-radius-rounded;
   }
 
+  &.ui-button-transparent {
+    background: transparent;
+    border-color: transparent;
+    color: $color-brand-primary;
+  }
+
   &.ui-state-default.ui-button-secondary {
     color: $text-color;
     background-color: $color-brand-secondary;

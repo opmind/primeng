@@ -1,7 +1,9 @@
 .ui-inplace {
-  min-height: $unit-xhuge;
+  position: relative;
+  //min-height: $unit-xhuge;
 
   .ui-inplace-display {
+    display: inline-flex;
     padding: $unit-tiny;
     border-radius: 3px;
     transition: background-color 0.2s;
@@ -9,7 +11,25 @@
     &:not(.ui-state-disabled):hover {
       background-color: $color-gray-2;
       color: $text-color-on-light;
+
+      > div {
+        padding-right: $unit-tiny;
+      }
+
+      &:after {
+        content: "\f040";
+        font-family: FontAwesome;
+      }
     }
+
+    &.ui-state-disabled {
+      opacity: 1;
+      cursor: default !important;
+    }
+  }
+
+  .ui-inplace-content {
+    display: inline-flex;
   }
 }
 

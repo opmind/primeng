@@ -25,7 +25,8 @@
 }
 
 .ui-inputgroup {
-  display: flex;
+  display: inline-flex;
+  vertical-align: middle;
 
   .ui-inputgroup-addon {
     min-width: 1.5em;

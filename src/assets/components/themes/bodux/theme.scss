@@ -10,7 +10,7 @@ body {
   //@import 'blockui/blockui.scss';
   @import 'breadcrumb/breadcrumb.scss';
   @import 'button/button';
-  //@import 'calendar/calendar.scss';
+  @import 'calendar/calendar.scss';
   @import 'card/card.scss';
   @import 'carousel/carousel.scss';
   @import 'checkbox/checkbox.scss';
@@ -69,7 +69,7 @@ body {
   //@import 'terminal/terminal.scss';
   @import 'tieredmenu/tieredmenu.scss';
   @import 'toast/toast.scss';
-  //@import 'toolbar/toolbar.scss';
+  @import 'toolbar/toolbar.scss';
   @import 'tooltip/tooltip.scss';
   @import 'tree/tree.scss';
   @import 'treetable/treetable.scss';
